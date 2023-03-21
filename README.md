@@ -1,5 +1,5 @@
 # DreamAI
-DreamAI is a lightweight Javascript library designed to easily interact with the OpenAI LLMs and Dall-E2 for content generation and image rendering.
+DreamAI is a lightweight (1.85k minified) Javascript library designed to easily interact with the OpenAI LLMs and Dall-E2 for content generation and image rendering.
 
 In order to use this library, you will need to obtain an API key from OpenAI. You can do so here: https://platform.openai.com. Please be sure to protect your API key. *If you check it into source control, OpenAI will revoke it.*
 
