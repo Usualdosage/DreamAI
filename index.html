@@ -1,0 +1,46 @@
+<html>
+<head>
+  <script type="text/javascript" src="dreamai.js"></script>
+  <script type="text/javascript">
+    const API_KEY = "YOUR API KEY";
+    
+    async function Complete() {
+      let trainingData = ["Speak in a second person narrative voice.", "Your response should be between four and ten sentences."];
+      let prompt = "Describe what I see when I look at a mongoose.";
+      let dreamAI = new DreamAI(API_KEY, DreamAI.GPT4, null);
+      console.log("DreamAI: API call executing...please wait.");
+      await dreamAI.Complete(prompt, trainingData, function (message) {
+          document.getElementById("aiContent").innerText = message;
+          console.log(message);
+      });
+    }
+
+    async function Image() {
+      let prompt = "Give me a realistic photo of a mongoose walking on a dirt path in the woods.";
+      let dreamAI = new DreamAI(API_KEY, DreamAI.GPT4, null);
+      console.log("DreamAI: API call executing...please wait.");
+      await dreamAI.Image(prompt, 512, 512, function (url) {
+          document.getElementById("aiImage").src = url;
+          console.log(url);
+      });
+    }
+
+    async function Images() {
+      let prompt = "Give me a realistic photo of a mongoose walking on a dirt path in the woods.";
+      let dreamAI = new DreamAI("API_KEY, DreamAI.GPT4, null);
+      console.log("DreamAI: API call executing...please wait.");
+      await dreamAI.Images(prompt, 256, 256, 4, function (urls) {
+          console.log(urls);
+      });
+    }
+</script>
+</head>
+<body>
+  <h1 class="display-4">DreamAI Sample</h1>
+  <button onclick="Complete()">Complete</button>
+  <button onclick="Image()">Image</button>
+  <button onclick="Images()">Images (4)</button>
+  <img style="width:512px; height:512px; border: solid 1px #ccc;" id="aiImage" />
+  <span id="aiContent"></span>
+</body>
+</html>
