@@ -80,7 +80,7 @@ To use this sample, download the `dreamia.js` code, then simply create an `index
 ```html
 <html>
   <head>
-    <script type="text/javascript" src="dreamai.js"></script>
+    <script type="text/javascript" src="dreamai.min.js"></script>
     <script type="text/javascript"> 
 
       const API_KEY = "YOUR API KEY";
